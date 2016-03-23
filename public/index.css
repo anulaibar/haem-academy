@@ -11,7 +11,7 @@
     text-align: center;
 }
 .dialog.closed {
-    top: -40em;
+    top: -100em;
 }
 .dialog > h2 {
     padding: 5em 0 1em 0;
