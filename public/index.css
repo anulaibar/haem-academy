@@ -85,7 +85,7 @@ footer {
     color: White;
     text-align: right;
 }
-@media (min-width: 30em) {
+@media (min-width: 50em) {
     h1 {
         font-size: 4em;
     }
