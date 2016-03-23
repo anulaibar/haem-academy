@@ -36,6 +36,16 @@ function initializeClock(id, endtime) {
     updateClock();
     var timeinterval = setInterval(updateClock, 1000);
 }
+function showDialog() {
+    var dialog = document.getElementById('dialog');
+    dialog.classList.remove('closed');
+}
+function closeDialog() {
+    var dialog = document.getElementById('dialog');
+    dialog.classList.add('closed');
+    document.body.classList.remove('hide-overflow');
+}
 
 var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
 initializeClock('clock', deadline);
+showDialog();

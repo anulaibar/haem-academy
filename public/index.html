@@ -6,7 +6,15 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto|Nunito' rel='stylesheet' type='text/css'>
         <link href='index.css' rel='stylesheet' type='text/css'>
     </head>
-    <body>
+    <body class="hide-overflow">
+        <div id="dialog" class="dialog closed">
+            <h2>
+                Jobbar du inom vården?
+            </h2>
+            <button id="button" onClick="closeDialog();">
+                Ja
+            </button>
+        </div>
         <header>
             <h1>Haem Academy</h1>
         </header>
