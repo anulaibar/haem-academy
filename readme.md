@@ -4,8 +4,14 @@
 
     npm install
 
-## Run
+## Start
 
     npm start
 
-[Browse to http://localhost:3000](http://localhost:3000/)
+## Use
+
+[http://localhost:3000](http://localhost:3000/)
+
+## Demo
+
+[https://haem.herokuapp.com/](https://haem.herokuapp.com/)
