@@ -8,4 +8,4 @@
 
     npm start
 
-[Browse to localhost:3000](http://http://localhost:3000/)
+[Browse to http://localhost:3000](http://localhost:3000/)
