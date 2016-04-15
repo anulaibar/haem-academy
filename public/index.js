@@ -26,7 +26,7 @@ function initializeClock(id, endtime) {
         daysSpan.innerHTML = t.days;
         hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
         minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+        //secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
         if (t.total <= 0) {
             clearInterval(timeinterval);
@@ -45,7 +45,30 @@ function closeDialog() {
     dialog.classList.add('closed');
     document.body.classList.remove('hide-overflow');
 }
-
+function handleScroll() {
+    var els = document.getElementsByClassName('animate');
+    window.addEventListener('scroll', function(){
+        if(window.pageYOffset > 460) {
+            showImage(els[0]);
+            setTimeout(function(){
+                showImage(els[1]);
+            }, 300);
+            setTimeout(function(){
+                showImage(els[2]);
+            }, 600);
+            setTimeout(function(){
+                showImage(els[3]);
+            }, 900);
+        }
+    });
+}
+function showImage(el) {
+    if(el.className.indexOf('visible') === -1) {
+        el.className = 'fi animate visible';
+    }
+}
 var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
 initializeClock('clock', deadline);
 showDialog();
+closeDialog();
+handleScroll();
