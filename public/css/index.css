@@ -62,10 +62,8 @@ h1, h2, h3 {
     font-weight: 700;
 }
 header {
-    position: absolute;
     background-color: #00dcf1;
     color: White;
-    opacity: .8;
     width: 100%;
     padding: 1em 0;
     text-align: center;
@@ -84,14 +82,14 @@ video {
     width: 100%;
     height: auto;
     z-index: -100;
-    background: url(img/background.png) no-repeat;
+    background: url(/img/background.png) no-repeat;
     background-size: cover;
 }
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(img/background.png);
+    background-image: url(/img/background.png);
     color: White;
     height: 24em;
     background-repeat: no-repeat;
@@ -110,13 +108,6 @@ video {
     font-weight: 300;
     text-transform: uppercase;
 }
-.wm { /* width-margin */
-    width: 80%;
-    margin: 0 auto;
-}
-.mb { /* margin-bottom */
-    margin-bottom: 5em;
-}
 .welcome {
     box-sizing: border-box;
     display: flex;
@@ -125,22 +116,29 @@ video {
     width: 100%;
     background-color: White;
     padding: 3em;
+    margin-bottom: 3em;
+}
+.events {
+    padding: 0 3em 1em 3em;
 }
 .banner {
-    padding: 2em 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2em 3em;
     background-color: #e7e4db;
+    margin-bottom: 3em;
 }
 .banner img {
     border-radius: 150px;
 }
-.fb { /* flex-box */
+.cards {
     display: flex;
     flex-direction: column;
-}
-.fi { /* flex-box-item */
-    margin: 1em;
+    margin: 0 2em 3em 2em;
 }
 .card {
+    margin: 1em;
     background-color: #1DADEB;
     color: White;
     border-radius: 2px;
@@ -148,11 +146,19 @@ video {
     padding: 1em;
 }
 footer {
-    padding: 2em;
-    min-height: 20em;
+    display: flex;
+    justify-content: space-between;
+    padding: 3em;
+    min-height: 10em;
     background-color: #e7e4db;
     color: Black;
-    text-align: right;
+}
+footer div {
+    width: 19em;
+}
+footer img {
+    width: 6em;
+    height: 4em;
 }
 .animate {
     transition: all 1s;
@@ -180,13 +186,13 @@ footer {
     video {
         display: block;
     }
-    .fb { /* flex-box */
+    .cards {
         flex-direction: row;
     }
-    .fi:first-child {
+    .cards:first-child {
         margin-left: 0em;
     }
-    .fi:last-child {
+    .cards:last-child {
         margin-right: 0em;
     }
 }
