@@ -145,6 +145,9 @@ video {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     padding: 1em;
 }
+.page {
+    padding: 3em 13em;
+}
 footer {
     display: flex;
     justify-content: space-between;
