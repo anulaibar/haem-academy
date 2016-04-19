@@ -67,8 +67,17 @@ function showImage(el) {
         el.className = 'fi animate visible';
     }
 }
+function loadVideo(){
+    if(document.body.clientWidth > 800) {
+        var source = document.getElementsByTagName('source')[0];
+        source.setAttribute('src', source.getAttribute('data-src'));
+        var video = document.getElementsByTagName('video')[0];
+        video.load();
+    }
+}
 var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
 initializeClock('clock', deadline);
 showDialog();
 closeDialog();
 handleScroll();
+loadVideo();

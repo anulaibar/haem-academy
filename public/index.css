@@ -59,7 +59,7 @@ header {
     color: White;
     opacity: .8;
     width: 100%;
-    padding: 1em;
+    padding: 1em 0;
     text-align: center;
 }
 header a {
@@ -68,8 +68,19 @@ header a {
     padding: .5em;
     font-weight: 300;
 }
+video {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+    background: url(img/background.png) no-repeat;
+    background-size: cover;
+}
 .hero {
-    background-image: url('img/hero-sm.jpeg');
+    background-image: url(img/background.png);
     color: White;
     height: 30em;
     background-repeat: no-repeat;
@@ -138,9 +149,12 @@ footer {
         font-size: 2em;
     }
     .hero {
-        background-image: url('img/hero-md.jpeg');
+        background-image: none;
         height: 30em;
         padding-top: 12em;
+    }
+    video {
+        display: block;
     }
     .fb { /* flex-box */
         flex-direction: row;
