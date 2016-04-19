@@ -14,20 +14,15 @@ function getTimeRemaining(endtime) {
 }
 
 function initializeClock(id, endtime) {
-    var clock = document.getElementById(id);
-    var daysSpan = clock.querySelector('.days');
-    var hoursSpan = clock.querySelector('.hours');
-    var minutesSpan = clock.querySelector('.minutes');
-    var secondsSpan = clock.querySelector('.seconds');
+    var days = document.getElementsByClassName('days')[0];
+    var hours = document.getElementsByClassName('hours')[0];
+    var minutes = document.getElementsByClassName('minutes')[0];
 
     function updateClock() {
         var t = getTimeRemaining(endtime);
-
-        daysSpan.innerHTML = t.days;
-        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-        //secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
+        days.innerHTML = t.days;
+        hours.innerHTML = ('0' + t.hours).slice(-2);
+        minutes.innerHTML = ('0' + t.minutes).slice(-2);
         if (t.total <= 0) {
             clearInterval(timeinterval);
         }
@@ -75,7 +70,7 @@ function loadVideo(){
         video.load();
     }
 }
-var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+var deadline = new Date('2016-06-25 08:00');
 initializeClock('clock', deadline);
 showDialog();
 closeDialog();

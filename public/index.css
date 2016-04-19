@@ -24,6 +24,10 @@
     display: flex;
     align-items: center;
 }
+.tidal {
+    display: flex;
+    flex-direction: column;
+}
 button {
     color: #fff;
     background-color: Transparent;
@@ -97,8 +101,14 @@ video {
     text-align: center;
 }
 .clock {
+    display: flex;
     font-size: 3em;
     font-weight: 600;
+}
+.clockLabel {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 .wm { /* width-margin */
     width: 80%;
