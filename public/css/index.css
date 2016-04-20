@@ -115,11 +115,11 @@ video {
     align-items: center;
     width: 100%;
     background-color: White;
-    padding: 3em;
-    margin-bottom: 3em;
+    padding: 3em 3em 6em 3em;
 }
 .events {
     padding: 0 3em 1em 3em;
+    background-color: White;
 }
 .banner {
     display: flex;

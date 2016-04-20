@@ -59,7 +59,7 @@ function handleScroll() {
 }
 function showImage(el) {
     if(el.className.indexOf('visible') === -1) {
-        el.className = 'fi animate visible';
+        el.className = 'animate visible';
     }
 }
 function loadVideo(){
