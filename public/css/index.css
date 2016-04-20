@@ -1,3 +1,14 @@
+html {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+body, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3 {
+    font-weight: 700;
+}
 .dialog {
     transition-property: all;
     transition-duration: 1s;
@@ -49,17 +60,6 @@ button:hover {
 }
 .hide-overflow {
     overflow-y: hidden;
-}
-html {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-}
-body, h1, h2, h3 {
-    margin: 0;
-    padding: 0;
-}
-h1, h2, h3 {
-    font-weight: 700;
 }
 header {
     background-color: #00dcf1;
@@ -125,9 +125,8 @@ video {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 2em 3em;
+    padding: 2em 3em 5em 2em;
     background-color: #e7e4db;
-    margin-bottom: 3em;
 }
 .banner img {
     border-radius: 150px;
@@ -135,7 +134,8 @@ video {
 .cards {
     display: flex;
     flex-direction: column;
-    margin: 0 2em 3em 2em;
+    background-color: White;
+    padding: 3em 2em 3em 2em;
 }
 .card {
     margin: 1em;
