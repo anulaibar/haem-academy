@@ -29,7 +29,7 @@ function initializeClock(id, endtime) {
     }
 
     updateClock();
-    var timeinterval = setInterval(updateClock, 1000);
+    var timeinterval = setInterval(updateClock, 1000 * 60);
 }
 function showDialog() {
     var dialog = document.getElementById('dialog');
@@ -70,7 +70,7 @@ function loadVideo(){
         video.load();
     }
 }
-var deadline = new Date('2016-06-25 08:00');
+var deadline = new Date('2016-06-25T08:00');
 initializeClock('clock', deadline);
 showDialog();
 closeDialog();
