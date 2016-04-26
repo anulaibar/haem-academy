@@ -162,6 +162,7 @@ hr {
 }
 .about-wrapper {
     padding: 6em 6em 6em 6em;
+    background-color: White;
 }
 .about {
     display: flex;
