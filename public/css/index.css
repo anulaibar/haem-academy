@@ -2,12 +2,13 @@ html {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
-body, h1, h2, h3 {
+body {
     margin: 0;
     padding: 0;
 }
 h1, h2, h3 {
-    font-weight: 700;
+    font-weight: 300;
+    margin-top: 0;
 }
 .dialog {
     transition-property: all;
@@ -91,12 +92,14 @@ video {
     align-items: center;
     background-image: url(/img/background.png);
     color: White;
-    height: 24em;
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
-    padding: 7em 2em 2em 2em;
+    padding: 4em 0;
     text-align: center;
+}
+.hero h2 {
+    margin: 0;
 }
 .clock {
     display: flex;
@@ -109,41 +112,66 @@ video {
     text-transform: uppercase;
 }
 .welcome {
+    text-align: center;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     background-color: White;
-    padding: 3em 3em 6em 3em;
+    padding: 3em 6em;
+    border-top: 5px solid #FDBDFF;
 }
-.events {
-    padding: 0 3em 1em 3em;
-    background-color: White;
+.welcome p {
+    padding-bottom: 3em;
 }
-.banner {
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.projects-wrapper {
+    background-color: #FED6FF;
+    border-top: 5px solid #FDBDFF;
+    padding: 3em 6em 6em 6em;
+}
+.projects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 2em 3em 5em 2em;
-    background-color: #e7e4db;
+    align-items: center;
 }
-.banner img {
+.projects img {
     border-radius: 150px;
+}
+.cards-wrapper {
+    padding: 0 6em;
+    background-color: White;
 }
 .cards {
     display: flex;
     flex-direction: column;
-    background-color: White;
-    padding: 3em 2em 3em 2em;
 }
 .card {
-    margin: 1em;
-    background-color: #1DADEB;
-    color: White;
     border-radius: 2px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    padding: 1em;
+    margin: 1em 0;
+}
+.card img {
+    width: 100%;
+}
+.card p {
+    margin: 1em;
+}
+.about-wrapper {
+    padding: 6em 6em 6em 6em;
+}
+.about {
+    display: flex;
+    justify-content: space-between;
+}
+.about p {
+    width: 80%;
+}
+.os_poll {
+    width: 500%;
 }
 .page {
     padding: 3em 13em;
@@ -151,7 +179,7 @@ video {
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 3em;
+    padding: 3em 6em;
     min-height: 10em;
     background-color: #e7e4db;
     color: Black;
@@ -181,7 +209,6 @@ footer img {
     }
     .hero {
         background-image: none;
-        height: 30em;
     }
     .clock {
         font-size: 7em;
@@ -192,10 +219,13 @@ footer img {
     .cards {
         flex-direction: row;
     }
-    .cards:first-child {
-        margin-left: 0em;
+    .card {
+        margin: 0 1em;
     }
-    .cards:last-child {
-        margin-right: 0em;
+    .card:first-child {
+        margin-left: 0;
+    }
+    .card:last-child {
+        margin-right: 0;
     }
 }

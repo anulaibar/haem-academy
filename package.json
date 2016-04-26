@@ -1,17 +1,19 @@
 {
-    "name": "haem-academy",
-    "version": "1.0.0",
-    "engines": {
-        "node": "5.6.0"
-    },
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start": "node app.js"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.13.4"
-    }
+  "name": "haem-academy",
+  "version": "1.0.0",
+  "engines": {
+    "node": "5.6.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "cp node_modules/pikaday/pikaday.js public/js && cp node_modules/pikaday/css/pikaday.css public/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "pikaday": "^1.4.0"
+  }
 }

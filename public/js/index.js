@@ -70,9 +70,19 @@ function loadVideo(){
         video.load();
     }
 }
+function showCalendar(){
+    var field = document.getElementsByClassName('calendar')[0];
+    var picker = new Pikaday({
+        onSelect: function(date) {
+                field.value = picker.toString();
+            }
+    });
+    field.parentNode.insertBefore(picker.el, field.nextSibling);
+}
 var deadline = new Date('2016-06-25T08:00');
 initializeClock('clock', deadline);
 showDialog();
 closeDialog();
 handleScroll();
 loadVideo();
+showCalendar();
