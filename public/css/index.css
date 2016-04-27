@@ -128,11 +128,13 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 .projects-wrapper {
+    text-align: center;
     background-color: #FED6FF;
     border-top: 5px solid #FDBDFF;
     padding: 3em 6em 6em 6em;
 }
 .projects {
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -146,10 +148,12 @@ hr {
     background-color: White;
 }
 .cards {
+    text-align: center;
     display: flex;
     flex-direction: column;
 }
 .card {
+    text-align: center;
     border-radius: 2px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     margin: 1em 0;
@@ -160,16 +164,48 @@ hr {
 .card p {
     margin: 1em;
 }
-.about-wrapper {
+.about-wrapper-top {
+    text-align: center;
     padding: 6em 6em 6em 6em;
     background-color: White;
 }
+.about-wrapper {
+    background-image: url("/img/aboutbackground.png");
+    background-size: 100%;
+    text-align: center;
+    padding: 6em 6em 6em 6em;
+
+    height: 200px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+    /*position: relative;
+    padding: 25vh 10%;
+    min-height: 10vw;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+    transform-style: inherit;*/
+}
+.about-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+
 .about {
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .about p {
-    width: 80%;
+    width: 100%;
 }
 .os_poll {
     width: 500%;
@@ -199,6 +235,7 @@ footer img {
     opacity: 0;
 }
 .visible {
+    vertical-align: right;
     opacity: 1;
 }
 @media (min-width: 50em) {
