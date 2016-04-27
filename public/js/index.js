@@ -43,7 +43,7 @@ function closeDialog() {
 function handleScroll() {
     var els = document.getElementsByClassName('animate');
     window.addEventListener('scroll', function(){
-        if(window.pageYOffset > 460) {
+        if(window.pageYOffset > 1200) {
             showImage(els[0]);
             setTimeout(function(){
                 showImage(els[1]);
