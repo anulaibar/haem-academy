@@ -181,7 +181,6 @@ hr {
     background-attachment: fixed;
     background-size: cover;
 
-
     /*position: relative;
     padding: 25vh 10%;
     min-height: 10vw;
@@ -190,6 +189,7 @@ hr {
     box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
     transform-style: inherit;*/
 }
+
 .about-wrapper:before {
   content: "";
   position: absolute;
