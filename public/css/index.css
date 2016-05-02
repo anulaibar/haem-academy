@@ -10,6 +10,9 @@ h1, h2, h3 {
     font-weight: 300;
     margin-top: 0;
 }
+p {
+    line-height: 1.6em;
+}
 .dialog {
     transition-property: all;
     transition-duration: 1s;
@@ -116,7 +119,7 @@ video {
     box-sizing: border-box;
     width: 100%;
     background-color: White;
-    padding: 3em 6em;
+    padding: 4% 20%;
     border-top: 5px solid #FDBDFF;
 }
 .welcome p {
@@ -128,23 +131,29 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 .projects-wrapper {
-    text-align: center;
-    background-color: #FED6FF;
-    border-top: 5px solid #FDBDFF;
-    padding: 3em 6em 6em 6em;
+    opacity: 0.8; /*watwat? transparency on whole div? */
+    background-color: #BFF6F9;    
+    /*background-color: #FED6FF;
+    border-top: 5px solid #FDBDFF; //pink colour codes from earlier version*/
+    padding: 2em 20% 4em 20%;
 }
 .projects {
-    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: space-between;
+}
+.projects {
+    margin-top: 1em;
 }
 .projects img {
-    border-radius: 150px;
+    width: 168px;
+}
+.project {
+    width: 10em;
 }
 .cards-wrapper {
-    padding: 0 6em;
+    padding: 0 20%;
     background-color: White;
 }
 .cards {
@@ -156,7 +165,7 @@ hr {
     text-align: center;
     border-radius: 2px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    margin: 1em 0;
+    margin: 0 2em 1em 0;
 }
 .card img {
     width: 100%;
@@ -164,18 +173,18 @@ hr {
 .card p {
     margin: 1em;
 }
-.about-wrapper-top {
-    text-align: center;
-    padding: 6em 6em 6em 6em;
+.poll-wrapper {
+    padding: 6em 20%;
     background-color: White;
+    display: flex;
+    flex-direction: column;
 }
 .about-wrapper {
+    text-align: center;
     background-image: url("/img/aboutbackground.png");
     background-size: 100%;
-    text-align: center;
-    padding: 6em 6em 6em 6em;
-
-    height: 200px;
+    padding: 3em 20%;
+    height: 22em;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -188,40 +197,37 @@ hr {
     box-sizing: border-box;
     box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
     transform-style: inherit;*/
+
 }
 
 .about-wrapper:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left:0;
-  right:0;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:0;
 }
-
-.about {
-    text-align: center;
+.poll {
     display: flex;
     justify-content: space-around;
 }
-.about p {
+.poll p {
     width: 100%;
 }
 .os_poll {
     width: 500%;
-}
-.page {
-    padding: 3em 13em;
+    padding: 2em 0 0 4em;
 }
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 3em 6em;
-    min-height: 10em;
+    padding: 3em 20%;
+    min-height: 5em;
     background-color: #e7e4db;
     color: Black;
 }
-footer div {
+footer p {
     width: 19em;
 }
 footer img {
@@ -238,7 +244,7 @@ footer img {
     vertical-align: right;
     opacity: 1;
 }
-@media (min-width: 50em) {
+@media (min-width: 50em){
     h1 {
         font-size: 4em;
     }
@@ -246,6 +252,7 @@ footer img {
         font-size: 2em;
     }
     .hero {
+        min-height: 35em;
         background-image: none;
     }
     .clock {
@@ -254,16 +261,24 @@ footer img {
     video {
         display: block;
     }
+    .welcome {
+        padding: 2em 20%;
+    }
     .cards {
         flex-direction: row;
-    }
-    .card {
-        margin: 0 1em;
+        justify-content: space-between;
     }
     .card:first-child {
-        margin-left: 0;
+        width: 25%;
     }
     .card:last-child {
-        margin-right: 0;
+        width: 40%;
+    }
+    .poll-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .about-wrapper {
+        height: 16em;
     }
 }
