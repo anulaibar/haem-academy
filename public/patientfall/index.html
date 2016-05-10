@@ -1,26 +1,87 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Haem Academy - The home of awesome.">
-        <title>Haem Academy</title>
+        <meta name="description" content="Haem Academy">
+        <title>Haem Academy - Patientfall</title>
         <link href='https://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
-        <link href='/css/index.css' rel='stylesheet' type='text/css'>
+        <link rel='stylesheet' type='text/css' href='/css/index.css'>
+        <link rel="stylesheet" type="text/css" href="./index.css">
+        <script type="text/javascript" src="./index.js"></script>
+        <script type="text/html" id="startingPage">
+            <div class="wrapper">
+                <h1>Patientfallsquiz</h1>
+                <p>Detta ska vi göra idag</p>
+                <input type="button" value="Starta utbildning" onclick="renderInstructionVideo()">
+            </div>
+        </script>
+        <script type="text/html" id="instructionVideo">
+            <div class="wrapper">
+                <h1>Video 1</h1>
+                <iframe width="320" height="200"
+                    src="https://www.youtube.com/v/6c7J1uHqLQo">
+                </iframe>
+                <br><br>
+                <input type="button" value="Starta quiz" class="btn btn-info" onclick="renderFirstQuestion()">
+            </div>
+        </script>
+        <script type="text/html" id="renderFirstQuestion">
+            <div class="wrapper">
+                <h1>Fråga 1</h1>
+                <p>Hur vill du behandla Gunnars hjärtflimmer?</p>
+                <div class="form-group">
+                    <form id"firstquestion">
+                        <input type="radio" name="treatment" id="heparin"> Heparin<br>
+                        <input type="radio" name="treatment" id="waran"> Waran<br>
+                        <input type="radio" name="treatment" id="antikoagulantia"> Avstår antikoagulantia<br><br>
+                        <input type="button" value="Rätta" class="btn btn-info" onclick="checkFirstQuestion()">
+                        <input type="button" value="INFO" class="btn btn-info">
+                    </form>
+                </div>
+        </script>
+        <script type="text/html" id="answerFirstQuestion">
+            <div class="wrapper">
+                <h1> Svarsvideo </h1>
+                <p id="answersection">Du svarade:</p>
+                <iframe width="320" height="200"
+                    src="https://youtube.com/v/14q3RlWmoRA">
+                </iframe>
+                <br><br>
+                <input type="button" value="Tillbaka" class="btn btn-primary"onclick="renderFirstQuestion()">
+                <input type="button" value="Fortsätt" class="btn btn-info" onclick="renderSecondVideo()">
+            </div>
+        </script>
+        <script type="text/html" id="renderSecondVideo">
+            <div class="wrapper">
+                <h1>Video 2</h1>
+                <p id="answersection">Fallet fortsätter</p>
+                <iframe width="320" height="200"
+                    src="https://www.youtube.com/v/6c7J1uHqLQo">
+                </iframe>
+                <br><br>
+                <input type="button" value="Tillbaka" class="btn btn-primary"onclick="answerFirstQuestion()">
+                <input type="button" value="Fortsätt" class="btn btn-info" onclick="answerSecondQuestion()">
+            </div>
+        </script>
+        <script type="text/html" id="answerSecondQuestion">
+            <div class="wrapper">
+                <h1>Fråga 2</h1>
+                <p id="answersection">Vad gör du nu?</p>
+                <form id"firstquestion">
+                    <input type="radio" name="treatment" id="alternativ1"> alternativ1<br>
+                    <input type="radio" name="treatment" id="alternativ2"> alternativ2<br>
+                    <input type="radio" name="treatment" id="alternativ3"> alternativ3<br>
+                    <input type="button" value="Tillbaka" class="btn btn-primary"onclick="renderSecondVideo()">
+                    <input type="button" value="Fortsätt" class="btn btn-info" onclick="checkSecondQuestion()">
+                </form>
+            </div>
+        </script>
     </head>
     <body>
         <header>
             <a href="/">Hem</a> - <a href="/patientfall">Patientfall</a> - <a href="/tidigare-events">Tidigare events</a>
         </header>
         <div class="page">
-            <h1>Patientfall</h1>
-            <p>
-                Vis essent rationibus cu, elitr adipiscing deterruisset an vix. Eos movet oratio interpretaris an, vim numquam placerat sensibus id. Lorem ipsum dolor sit amet, illum delicata est in, his no magna consetetur. Duo ei cibo consequat, putant moderatius per cu, mei ad dolorum menandri.
-            </p>
-            <p>
-                Vis essent rationibus cu, elitr adipiscing deterruisset an vix. Eos movet oratio interpretaris an, vim numquam placerat sensibus id. Lorem ipsum dolor sit amet, illum delicata est in, his no magna consetetur. Duo ei cibo consequat, putant moderatius per cu, mei ad dolorum menandri.
-            </p>
-            <p>
-                Vis essent rationibus cu, elitr adipiscing deterruisset an vix. Eos movet oratio interpretaris an, vim numquam placerat sensibus id. Lorem ipsum dolor sit amet, illum delicata est in, his no magna consetetur. Duo ei cibo consequat, putant moderatius per cu, mei ad dolorum menandri.
-            </p>
+        <div id="pagecontent"></div>
         </div>
     </body>
 </html>
