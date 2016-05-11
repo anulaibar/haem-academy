@@ -19,11 +19,14 @@ p {
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
     background-color:rgba(0, 0, 0, 0.8);
     color: White;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
-    text-align: center;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
 }
 .dialog.closed {
@@ -43,11 +46,11 @@ p {
     display: flex;
     flex-direction: column;
 }
-button {
-    color: #fff;
+a.button {
+    color: initial;
     background-color: Transparent;
     letter-spacing: .5px;
-    border: 1px solid White;
+    border: 1px solid Black;
     border-radius: 2px;
     display: inline-block;
     height: 36px;
@@ -58,8 +61,13 @@ button {
     text-transform: uppercase;
     font-size: 1.2em;
     font-weight: 300;
+    text-decoration: none;
 }
-button:hover {
+.hero a.button {
+    color: White;
+    border: 1px solid White;
+}
+a.button:hover {
     cursor: pointer;
 }
 .hide-overflow {
@@ -197,9 +205,23 @@ hr {
 .poll p {
     width: 100%;
 }
-.os_poll {
+.poll .os_poll {
     width: 500%;
     padding: 2em 0 0 4em;
+}
+.os_poll {
+    width: 100%;
+}
+.patient-cases {
+    padding: 0 20%;
+}
+.patient-cases .nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.patient-cases .experts {
+    display: flex;
+    flex-wrap: wrap;
 }
 footer {
     display: flex;
@@ -220,7 +242,7 @@ footer img {
     transition: all 1s;
 }
 .hidden {
-    opacity: 0;
+    top: -50em;
 }
 .visible {
     vertical-align: right;

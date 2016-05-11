@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Haem Academy">
+        <title>Haem Academy</title>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+        <link rel='stylesheet' type='text/css' href='/css/index.css'>
+    </head>
+    <body>
+        <header>
+            <a href="/">Hem</a> - <a href="/patient-cases/gunnar">Patient cases</a>
+        </header>
+        <div class="patient-cases">
+            <div class="os_poll" data-path="/polls/2358224"></div>
+            <div class="nav">
+                <a class="button" href="/patient-cases/kerstin">Continue</a>
+            </div>
+            <h2>Experts comments</h2>
+            <div class="experts">
+                <a class="button" onClick="showDialog()">Heparin</a>
+                <a class="button" onClick="showDialog()">Warfarin</a>
+                <a class="button" onClick="showDialog()">Refrain from anticoagulants</a>
+            </div>
+        </div>
+        <footer>
+            <p>
+                Lorem ipsum dolor sit amet, illum delicata est in, his no magna consetetur.
+            </p>
+            <img src="/img/logo.png">
+        </footer>
+        <div class="dialog hidden" onClick="hideDialog()">
+            <div id="player"></div>
+        </div>
+        <script>
+            (function(d, s, id){
+                var js,
+                fjs = d.getElementsByTagName(s)[0],
+                    p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+                    r = Math.floor(new Date().getTime() / 1000000);
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id; js.async=1;
+                js.src = p + "www.opinionstage.com/assets/loader.js?" + r;
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'os-widget-jssdk'));
+        </script>
+        <script>
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    height: '390',
+                    width: '640',
+                    videoId: '14q3RlWmoRA',
+                });
+            }
+
+            function hideDialog() {
+                player.pauseVideo();
+                var dialog = document.getElementsByClassName('dialog')[0];
+                dialog.classList.add('hidden');
+            }
+
+            function showDialog() {
+                player.playVideo();
+                var dialog = document.getElementsByClassName('dialog')[0];
+                dialog.classList.remove('hidden');
+            }
+        </script>
+    </body>
+</html>
