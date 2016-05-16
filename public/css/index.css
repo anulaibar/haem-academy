@@ -25,12 +25,15 @@ p {
     top: 0;
     left: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1;
+    opacity: 1;
 }
-.dialog.closed {
+.dialog.hide {
     top: -100em;
+    opacity: 0;
 }
 .dialog > h2 {
     padding: 5em 0 1em 0;
@@ -63,7 +66,7 @@ a.button {
     font-weight: 300;
     text-decoration: none;
 }
-.hero a.button {
+a.button.inverse {
     color: White;
     border: 1px solid White;
 }
@@ -240,9 +243,6 @@ footer img {
 }
 .animate {
     transition: all 1s;
-}
-.hidden {
-    top: -50em;
 }
 .visible {
     vertical-align: right;

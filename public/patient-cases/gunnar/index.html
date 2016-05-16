@@ -28,8 +28,9 @@
             </p>
             <img src="/img/logo.png">
         </footer>
-        <div class="dialog hidden" onClick="hideDialog()">
+        <div class="dialog hide" onClick="hideDialog()">
             <div id="player"></div>
+            <a class="button inverse">Close</a>
         </div>
         <script>
             (function(d, s, id){
@@ -59,15 +60,15 @@
             }
 
             function hideDialog() {
-                player.pauseVideo();
+                player.stopVideo();
                 var dialog = document.getElementsByClassName('dialog')[0];
-                dialog.classList.add('hidden');
+                dialog.classList.add('hide');
             }
 
             function showDialog() {
                 player.playVideo();
                 var dialog = document.getElementsByClassName('dialog')[0];
-                dialog.classList.remove('hidden');
+                dialog.classList.remove('hide');
             }
         </script>
     </body>

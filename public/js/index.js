@@ -33,11 +33,11 @@ function initializeClock(id, endtime) {
 }
 function showDialog() {
     var dialog = document.getElementById('dialog');
-    dialog.classList.remove('closed');
+    dialog.classList.remove('hide');
 }
 function closeDialog() {
     var dialog = document.getElementById('dialog');
-    dialog.classList.add('closed');
+    dialog.classList.add('hide');
     document.body.classList.remove('hide-overflow');
 }
 function handleScroll() {
