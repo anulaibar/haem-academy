@@ -18,7 +18,7 @@ p {
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
     background-color:rgba(0, 0, 0, 0.8);
-    color: White;
+    color: white;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -53,7 +53,7 @@ a.button {
     color: initial;
     background-color: Transparent;
     letter-spacing: .5px;
-    border: 1px solid Black;
+    border: 1px solid black;
     border-radius: 2px;
     display: inline-block;
     height: 36px;
@@ -67,8 +67,14 @@ a.button {
     text-decoration: none;
 }
 a.button.inverse {
-    color: White;
-    border: 1px solid White;
+    color: white;
+    border: 1px solid white;
+}
+a.button.blue {
+    background-color: rgba(52, 153, 194, 0.2);
+}
+a.button.blue:hover {
+    background-color: rgba(52, 153, 194, 0.5);
 }
 a.button:hover {
     cursor: pointer;
@@ -78,16 +84,22 @@ a.button:hover {
 }
 header {
     background-color: #00dcf1;
-    color: White;
+    color: white;
     width: 100%;
     padding: 1em 0;
     text-align: center;
 }
 header a {
-    text-decoration: none;
-    color: White;
+    color: white;
     padding: .5em;
     font-weight: 300;
+}
+a {
+    text-decoration: none;
+    color: rgb(0, 136, 204);
+}
+a:hover {
+    text-decoration: underline;
 }
 video {
     display: none;
@@ -105,7 +117,7 @@ video {
     flex-direction: column;
     align-items: center;
     background-image: url(/img/background.png);
-    color: White;
+    color: white;
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
@@ -129,7 +141,7 @@ video {
     text-align: center;
     box-sizing: border-box;
     width: 100%;
-    background-color: White;
+    background-color: white;
     padding: 4% 20%;
     border-top: 5px solid #FDBDFF;
 }
@@ -165,7 +177,7 @@ hr {
 }
 .cards-wrapper {
     padding: 0 20%;
-    background-color: White;
+    background-color: white;
 }
 .cards {
     text-align: center;
@@ -186,7 +198,7 @@ hr {
 }
 .poll-wrapper {
     padding: 6em 20%;
-    background-color: White;
+    background-color: white;
     display: flex;
     flex-direction: column;
 }
@@ -232,7 +244,7 @@ footer {
     padding: 3em 20%;
     min-height: 5em;
     background-color: #e7e4db;
-    color: Black;
+    color: black;
 }
 footer p {
     width: 19em;
